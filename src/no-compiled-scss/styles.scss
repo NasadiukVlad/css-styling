@@ -1,0 +1,164 @@
+// THIS FILE SHOW ONLY SCSS SYNTAX,
+// THIS FILE DOESN`T SHOW BEST PRACTISES OR HIGH QUALITY CODE
+
+$template-dark-color: #041474;
+$template-primary-color: rgba(213, 255, 64, 0.79);
+
+$template-full-height: 100vh;
+$template-full-width: 900px;
+
+$template-primary-font-size: 12px;
+$template-primary-font-width: 400;
+
+body {
+  background: $template-primary-color;
+  font-size: $template-primary-font-size;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+body {
+  font-size: $template-primary-font-size;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  .custom-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $template-primary-font-size;
+    height: 500px;
+    width: 500px;
+    font-size: $template-primary-font-size;
+
+    .inner-example {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: green;
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+@mixin flex-column-all-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: $template-primary-font-size;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  .custom-parent {
+    @include flex-column-all-center;
+    background: $template-primary-color;
+    height: 500px;
+    width: 500px;
+    font-size: $template-primary-font-size;
+
+    .inner-example {
+      @include flex-column-all-center;
+      background: green;
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+@mixin flex-column-all-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin if-example($local-var) {
+  @if $local-var {
+    @include flex-column-all-center;
+  } @else {
+    display: block;
+  }
+}
+
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+
+body {
+
+  a {
+    @include padding(2px 4px 6px);
+  }
+
+  @include if-example(true) ;
+  font-size: $template-primary-font-size;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  .custom-parent {
+    @include flex-column-all-center;
+    background: $template-primary-color;
+    height: 500px;
+    width: 500px;
+    font-size: $template-primary-font-size;
+
+    .inner-example {
+      @include flex-column-all-center;
+      background: green;
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+.row {
+  width: 50px;
+}
+
+.new-row {
+  @extend .row;
+}
+
+.another-row {
+  @extend .row;
+}
+
+@mixin row {
+  width: 50px;
+}
+
+.new-row {
+  @include row;
+}
+
+.another-row {
+  @include row;
+}
+
+@media only screen and (min-width: 1200px) {
+  .mobile-layout {
+    display: none;
+  }
+  .desktop-layout {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .mobile-layout {
+    display: block;
+    text-align: -webkit-center;
+  }
+  .desktop-layout {
+    display: none;
+  }
+}

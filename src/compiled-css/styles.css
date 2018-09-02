@@ -1,0 +1,128 @@
+body {
+  background: rgba(213, 255, 64, 0.79);
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+body {
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+body .custom-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: 12px;
+  height: 500px;
+  width: 500px;
+  font-size: 12px;
+}
+
+body .custom-parent .inner-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  width: 400px;
+  height: 400px;
+}
+
+body {
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+body .custom-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(213, 255, 64, 0.79);
+  height: 500px;
+  width: 500px;
+  font-size: 12px;
+}
+
+body .custom-parent .inner-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  width: 400px;
+  height: 400px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+body a {
+  padding: 2px 4px 6px;
+}
+
+body .custom-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(213, 255, 64, 0.79);
+  height: 500px;
+  width: 500px;
+  font-size: 12px;
+}
+
+body .custom-parent .inner-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  width: 400px;
+  height: 400px;
+}
+
+.row, .new-row, .another-row {
+  width: 50px;
+}
+
+.new-row {
+  width: 50px;
+}
+
+.another-row {
+  width: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .mobile-layout {
+    display: none;
+  }
+
+  .desktop-layout {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .mobile-layout {
+    display: block;
+    text-align: -webkit-center;
+  }
+
+  .desktop-layout {
+    display: none;
+  }
+}
