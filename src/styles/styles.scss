@@ -1,5 +1,9 @@
 // ALL LECTURE SCSS SAMPLES ARA PLACED IN SRC/NO-COMPILED-STYLES.SCSS
+@import "variables";
 
+h1 {
+  background: $template-full-height;
+}
 :root {
   --my-awesome-theme-color: green;
   --my-awesome-theme-font-size: 14px;
